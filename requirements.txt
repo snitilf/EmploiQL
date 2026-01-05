@@ -1,0 +1,12 @@
+# database
+psycopg2-binary==2.9.9
+
+# llm extraction
+openai>=1.0.0
+
+# cli formatting 
+rich>=13.0.0
+
+# web scraping 
+requests>=2.31.0
+beautifulsoup4>=4.12.0
