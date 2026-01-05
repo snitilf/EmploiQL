@@ -2,9 +2,9 @@
 -- this file defines all tables, columns, relationships, and constraints
 -- run this once to set up an empty database structure, then populate with data
 -- ============================================================================
--- important: tables must be created in a specific order
+-- tables must be created in a specific order
 -- if table B references table A (via foreign key), table A must exist first
--- order: companies -> skills -> jobs -> job_skills -> raw_postings
+-- companies -> skills -> jobs -> job_skills -> raw_postings
 -- ============================================================================
 -- ============================================================================
 -- TABLE 1: companies
