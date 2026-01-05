@@ -493,9 +493,9 @@ if __name__ == "__main__":
         # result is a dict because of RealDictCursor
         # the column is auto-named "?column?" for literal SELECT
         if result:
-            print("✓ connected successfully to EmploiQL database")
+            print("connected successfully to EmploiQL database")
         else:
-            print("✗ connection test failed")
+            print("connection test failed")
     
     print("\ntesting get_top_skills (will be empty if no data)...")
     top_skills = get_top_skills(5)
