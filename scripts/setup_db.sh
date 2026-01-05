@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# creates the EmploiQL database and runs the schema
+# setup_db.sh - creates the EmploiQL database and runs the schema
 # usage: ./scripts/setup_db.sh
 
 set -e
@@ -67,7 +67,8 @@ fi
 
 echo ""
 print_status "tables in $database_name:"
-psql -d "$database_name" -c "\dt"
+# PAGER=cat prevents psql from opening less/more for output
+PAGER=cat psql -d "$database_name" -c "\dt"
 
 echo ""
 print_success "database setup complete!"
