@@ -1,4 +1,4 @@
-# db.py - database connection and utility functions for EmploiQL
+# database connection and utility functions for EmploiQL
 # this module handles all communication between python and postgresql
 from typing import Any
 import os
