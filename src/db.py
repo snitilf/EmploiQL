@@ -24,7 +24,7 @@ def get_connection():
     )
     return connection
 
-# test to verify the database connection works by running the file directly
+# test to verify the database connection works
 if __name__ == "__main__":
     connection = get_connection()
     cursor = connection.cursor()
