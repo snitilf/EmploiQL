@@ -2,12 +2,9 @@
 # this module handles all communication between python and postgresql
 from typing import Any
 import os
-# psycopg2 is the most popular postgresql adapter for python
-# it translates python code into sql commands that postgresql understands
 import psycopg2
+
 # special cursor that returns query results as dictionaries
-# instead of tuples. so instead of (1, "Google", "tech") we get
-# {"id": 1, "name": "Google", "industry": "tech"} which is much easier to work with
 from psycopg2.extras import RealDictCursor
 
 def get_connection():
