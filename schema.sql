@@ -98,7 +98,7 @@ create table jobs (
 
 -- ============================================================================
 -- TABLE 4: job_skills (junction table)
--- solves the many-to-many relationship problem:
+-- solves many-to-many relationship problem:
 --   - one job requires many skills
 --   - one skill is required by many jobs
 -- each row represents one connection: this job requires this skill
