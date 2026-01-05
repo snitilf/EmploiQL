@@ -38,6 +38,6 @@ if __name__ == "__main__":
     else:
         print("connection test failed")
     
-    # always clean up when done
+    # clean up when done
     cursor.close()
     connection.close()
