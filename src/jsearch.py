@@ -1,4 +1,5 @@
 # fetch job postings from JSearch API (via RapidAPI)
+# focused on montreal tech internships
 # uses caching to preserve free API quota (200 requests/month)
 
 import json
@@ -17,19 +18,67 @@ RAPIDAPI_HOST = "jsearch.p.rapidapi.com"
 # cache directory for storing API responses
 CACHE_DIR = Path(__file__).parent.parent / "data" / "jsearch_cache"
 
+# internship search presets - saves API quota by having go-to queries
+# each preset maps to a search query optimized for montreal internships
+INTERNSHIP_PRESETS = {
+    "software": {
+        "query": "software engineer intern",
+        "description": "Software engineering internships"
+    },
+    "developer": {
+        "query": "software developer intern",
+        "description": "Software developer internships"
+    },
+    "devops": {
+        "query": "devops intern",
+        "description": "DevOps and cloud infrastructure internships"
+    },
+    "data": {
+        "query": "data science intern",
+        "description": "Data science and analytics internships"
+    },
+    "cyber": {
+        "query": "cybersecurity intern",
+        "description": "Cybersecurity and security engineering internships"
+    },
+    "frontend": {
+        "query": "frontend developer intern",
+        "description": "Frontend/UI development internships"
+    },
+    "backend": {
+        "query": "backend developer intern",
+        "description": "Backend development internships"
+    },
+    "fullstack": {
+        "query": "full stack developer intern",
+        "description": "Full-stack development internships"
+    },
+    "ml": {
+        "query": "machine learning intern",
+        "description": "Machine learning and AI internships"
+    },
+    "qa": {
+        "query": "QA engineer intern",
+        "description": "Quality assurance and testing internships"
+    }
+}
+
+# default location focused on montreal
+DEFAULT_LOCATION = "Montreal, Canada"
+
 
 def search_jobs(
-    query: str = "software developer",
-    location: str = "Montreal, Canada",
+    query: str = "software developer intern",
+    location: str = DEFAULT_LOCATION,
     num_pages: int = 1,
     use_cache: bool = True
 ) -> list[dict]:
     """
-    search for jobs via JSearch API.
+    search for internships via JSearch API.
     
     args:
-        query: job title or keywords (e.g., "python developer", "data scientist")
-        location: city/country to search
+        query: job title or keywords (e.g., "software engineer intern")
+        location: city/country to search (default: Montreal, Canada)
         num_pages: pages to fetch (10 jobs per page). careful - each page = 1 API call!
         use_cache: if True, load from cache instead of making API call
     
@@ -52,9 +101,10 @@ def search_jobs(
     if not RAPIDAPI_KEY:
         print("Error: RAPIDAPI_KEY environment variable not set")
         print("Run: export RAPIDAPI_KEY='your-key-here'")
+        print("get your free key at: https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch")
         return []
     
-    print(f"Fetching from JSearch API...")
+    print(f"   Fetching from JSearch API...")
     print(f"   Query: '{query}' in '{location}'")
     print(f"   Pages: {num_pages} (≈{num_pages * 10} jobs, costs {num_pages} API calls)")
     
@@ -75,9 +125,43 @@ def search_jobs(
     }
     with open(cache_file, "w") as f:
         json.dump(cache_data, f, indent=2)
-    print(f"💾 Saved {len(all_jobs)} jobs to cache: {cache_file.name}")
+    print(f"  Saved {len(all_jobs)} jobs to cache: {cache_file.name}")
     
     return all_jobs
+
+
+def search_preset(
+    preset: str,
+    location: str = DEFAULT_LOCATION,
+    num_pages: int = 1,
+    use_cache: bool = True
+) -> list[dict]:
+    """
+    search using a preset internship category.
+    
+    args:
+        preset: one of the keys in INTERNSHIP_PRESETS (software, devops, cyber, etc.)
+        location: city/country (default: Montreal)
+        num_pages: pages to fetch
+        use_cache: load from cache if available
+    
+    returns:
+        list of job dictionaries
+    """
+    if preset not in INTERNSHIP_PRESETS:
+        print(f"Unknown preset: {preset}")
+        print(f"Available: {', '.join(INTERNSHIP_PRESETS.keys())}")
+        return []
+    
+    config = INTERNSHIP_PRESETS[preset]
+    print(f"Using preset: {config['description']}")
+    
+    return search_jobs(
+        query=config["query"],
+        location=location,
+        num_pages=num_pages,
+        use_cache=use_cache
+    )
 
 
 def _fetch_page(query: str, location: str, page: int = 1) -> list[dict]:
@@ -97,7 +181,9 @@ def _fetch_page(query: str, location: str, page: int = 1) -> list[dict]:
         "page": page,
         "num_pages": 1,
         "country": "ca",  # canada
-        "date_posted": "month"  # jobs from last month
+        "date_posted": "month",  # jobs from last month
+        # employment_types filter for internships when available
+        # some postings don't have this field properly set, so we rely on query terms
     }
     
     response = requests.get(url, headers=headers, params=params)
@@ -114,14 +200,11 @@ def _fetch_page(query: str, location: str, page: int = 1) -> list[dict]:
 def jsearch_to_raw_posting(job: dict) -> dict:
     """
     convert JSearch job format to our raw_posting format.
-    this bridges JSearch → extraction.py pipeline.
+    this bridges JSearch -> extraction.py pipeline.
     
     jsearch gives us structured data already, but we'll still run it
     through extraction.py for consistency and skill normalization.
     """
-    # build a text blob similar to what we'd scrape from Indeed/LinkedIn
-    # extraction.py expects raw text, not structured data
-    
     description = job.get("job_description", "")
     
     # construct raw content like a scraped posting
@@ -174,57 +257,118 @@ def list_cache() -> list[str]:
     return [f.name for f in CACHE_DIR.glob("*.json")]
 
 
-# CLI for testing 
+def list_presets() -> None:
+    """print all available internship presets."""
+    print("\nAvailable Internship Presets:")
+    print("-" * 50)
+    for name, config in INTERNSHIP_PRESETS.items():
+        print(f"  {name:12} - {config['description']}")
+    print()
+    print("Usage: python src/jsearch.py --preset software --live")
+
+
+# CLI for fetching internship data
 if __name__ == "__main__":
     import argparse
     
-    parser = argparse.ArgumentParser(description="Fetch jobs from JSearch API")
+    parser = argparse.ArgumentParser(
+        description="Fetch Montreal tech internships from JSearch API",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  %(prog)s --preset software --live     # fetch software engineering internships
+  %(prog)s --preset devops --live       # fetch devops internships
+  %(prog)s --query "python intern"      # custom search (from cache)
+  %(prog)s --list-presets               # show all preset categories
+  %(prog)s --list-cache                 # show cached searches
+        """
+    )
+    
     parser.add_argument("--live", action="store_true", 
                         help="Make live API call (default: use cache)")
-    parser.add_argument("--query", "-q", default="software developer",
-                        help="Job search query")
-    parser.add_argument("--location", "-l", default="Montreal, Canada",
-                        help="Location to search")
-    parser.add_argument("--pages", "-p", type=int, default=1,
+    parser.add_argument("--query", "-q", default=None,
+                        help="Custom job search query")
+    parser.add_argument("--preset", "-p", choices=list(INTERNSHIP_PRESETS.keys()),
+                        help="Use a preset internship category")
+    parser.add_argument("--location", "-l", default=DEFAULT_LOCATION,
+                        help=f"Location to search (default: {DEFAULT_LOCATION})")
+    parser.add_argument("--pages", type=int, default=1,
                         help="Number of pages (10 jobs each, 1 API call each)")
     parser.add_argument("--list-cache", action="store_true",
                         help="List cached searches")
+    parser.add_argument("--list-presets", action="store_true",
+                        help="List available internship presets")
     
     args = parser.parse_args()
     
     print("=" * 60)
-    print("JSearch API Client")
+    print("EmploiQL - JSearch Internship Fetcher")
     print("=" * 60)
     
-    if args.list_cache:
+    if args.list_presets:
+        list_presets()
+    
+    elif args.list_cache:
         cached = list_cache()
         if cached:
-            print(f"\n Cached searches ({len(cached)}):")
+            print(f"\nCached searches ({len(cached)}):")
             for c in cached:
                 print(f"   • {c}")
+            print(f"\Load with: python3 scripts/load_jsearch.py --query '...'")
         else:
-            print("\n No cached searches yet")
+            print("\nNo cached searches yet")
             print("   Run with --live to fetch jobs")
-    else:
-        # fetch jobs (from cache or live)
+            print("   Example: python3 src/jsearch.py --preset software --live")
+    
+    elif args.preset:
+        # use preset category
+        jobs = search_preset(
+            preset=args.preset,
+            location=args.location,
+            num_pages=args.pages,
+            use_cache=not args.live
+        )
+        
+        if jobs:
+            _print_sample(jobs)
+    
+    elif args.query:
+        # custom search
         jobs = search_jobs(
             query=args.query,
             location=args.location,
             num_pages=args.pages,
-            use_cache=not args.live  # --live means don't use cache
+            use_cache=not args.live
         )
         
         if jobs:
-            print(f"\n Sample job:")
-            print("-" * 40)
-            sample = jobs[0]
-            print(f"Title:    {sample.get('job_title')}")
-            print(f"Company:  {sample.get('employer_name')}")
-            print(f"Location: {sample.get('job_city')}, {sample.get('job_state')}")
-            print(f"Type:     {sample.get('job_employment_type')}")
-            print(f"Salary:   {_format_salary(sample)}")
-            print(f"URL:      {sample.get('job_apply_link', 'N/A')[:60]}...")
-            
-            print(f"\n Next steps:")
-            print(f"   1. Run extraction: python scripts/load_jsearch.py")
-            print(f"   2. Query with SQL: python src/cli.py")
+            _print_sample(jobs)
+    
+    else:
+        # no query specified - show help
+        print("\nNo search specified. Use --preset or --query")
+        print()
+        list_presets()
+        print("Or try: python3 src/jsearch.py --preset software --live")
+
+
+def _print_sample(jobs: list[dict]) -> None:
+    """print a sample job and next steps."""
+    if not jobs:
+        return
+    
+    print(f"\nFound {len(jobs)} jobs")
+    print("\nSample job:")
+    print("-" * 40)
+    sample = jobs[0]
+    print(f"Title:    {sample.get('job_title')}")
+    print(f"Company:  {sample.get('employer_name')}")
+    print(f"Location: {sample.get('job_city')}, {sample.get('job_state')}")
+    print(f"Type:     {sample.get('job_employment_type')}")
+    print(f"Salary:   {_format_salary(sample)}")
+    url = sample.get('job_apply_link', 'N/A')
+    print(f"URL:      {url[:60]}..." if len(url) > 60 else f"URL:      {url}")
+    
+    print(f"\nNext steps:")
+    print(f"   Load into database: python3 scripts/load_jsearch.py")
+    print(f"   Query with CLI:     python3 src/cli.py")
