@@ -222,7 +222,7 @@ def insert_job(
         company_id: must reference existing company (foreign key)
         title: job title
         description: full job description text
-        salary_min/max: salary range (often null in real postings)
+        salary_min/max: salary range (often null in postings)
         location: job location
         posted_date: when job was posted (format: 'YYYY-MM-DD')
         source_url: original posting url
@@ -308,7 +308,7 @@ def search_jobs(
     # WHERE 1=1 trick: it's always true, but lets us add conditions
     # with AND without worrying if it's the first condition or not
     
-    # collect parameters in a list (order matters)
+    # collect parameters in a list since order matters
     parameters = []
     
     # dynamically add conditions based on what filters were provided
@@ -388,9 +388,9 @@ def get_skills_for_job(job_id: int) -> list[dict]:
 
 def get_top_skills(limit: int = 10) -> list[dict]:
     """
-    get the most frequently requested skills across all jobs.
+    get the most frequently requested skills across all jobs
     
-    this is a key query for your project - shows market demand!
+    this is a key query
     """
     with get_cursor(commit=False) as cursor:
         # COUNT(*) counts rows, GROUP BY collects rows by skill
