@@ -91,7 +91,7 @@ def search_jobs(
     
     # try loading from cache first
     if use_cache and cache_file.exists():
-        print(f"📁 Loading from cache: {cache_file.name}")
+        print(f"Loading from cache: {cache_file.name}")
         with open(cache_file, "r") as f:
             cached = json.load(f)
         print(f"   Found {len(cached['jobs'])} jobs (cached {cached['fetched_at']})")
