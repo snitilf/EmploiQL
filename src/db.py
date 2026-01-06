@@ -23,7 +23,6 @@ def get_connection():
     # and authenticates. returns a connection object for running queries.
     # host="localhost" postgresql runs on your machine
     # port=5432 is postgresql's default port
-    # os.getenv("USER") gets your system username (mac/linux auto-auth)
     connection = psycopg2.connect(
         dbname="EmploiQL",
         user=os.getenv("USER"),
@@ -38,7 +37,6 @@ def get_cursor(commit: bool = True):
     """
     context manager that handles connection lifecycle automatically.
     
-    WHY USE THIS:
     - automatically closes cursor and connection when done
     - automatically commits on success (if commit=True)
     - automatically rolls back on exception
@@ -51,8 +49,8 @@ def get_cursor(commit: bool = True):
         # connection automatically closed here, changes committed
     
     args:
-        commit: if True, commit transaction on successful exit.
-                set to False for read-only queries (slightly faster).
+        commit: if true, commit transaction on successful exit.
+                set to false for read-only queries 
     """
     # @contextmanager decorator turns this function into a context manager
     # code before 'yield' runs on __enter__ (the 'with' line)
@@ -68,8 +66,8 @@ def get_cursor(commit: bool = True):
         # instead of creating a cursor then setting its type, we pass it here
         cursor = connection.cursor(cursor_factory=RealDictCursor)
         
-        # yield pauses here and gives cursor to the 'with' block
-        # when the block finishes, execution continues below
+        # yield pauses here and gives cursor to with block
+        # when the block finishes, execution continues 
         yield cursor
         
         # if we reach here, no exception was raised
@@ -79,7 +77,7 @@ def get_cursor(commit: bool = True):
             connection.commit()
             
     except Exception:
-        # if any error occurred in the 'with' block, undo all changes
+        # if any error occurred in the with block, undo all changes
         # rollback() discards all uncommitted changes from this session
         if connection:
             connection.rollback()
@@ -150,8 +148,7 @@ def get_or_create_company(name: str, website: Optional[str] = None) -> int:
     """
     get existing company id or create new one if it doesn't exist.
     
-    this pattern is common when importing data - you don't know if
-    the company already exists, and you don't want duplicates.
+    don't know if the company already exists, don't want duplicates.
     
     returns:
         company id (existing or newly created)
