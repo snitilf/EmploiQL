@@ -17,12 +17,11 @@ def get_connection():
     use this when you need fine-grained control over commits/rollbacks
     for most cases, prefer get_cursor() context manager instead
     
-    IMPORTANT: caller is responsible for closing the connection!
+    caller is responsible for closing the connection
     """
     # psycopg2.connect() establishes a TCP connection to the postgresql server
     # and authenticates. returns a connection object for running queries.
-    # 
-    # host="localhost" means postgresql runs on your machine
+    # host="localhost" postgresql runs on your machine
     # port=5432 is postgresql's default port
     # os.getenv("USER") gets your system username (mac/linux auto-auth)
     connection = psycopg2.connect(
