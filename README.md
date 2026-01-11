@@ -46,6 +46,11 @@ see skill demand, frequency, and co-occurrence patterns.
 
 ![skills analysis](docs/images/skills.png)
 
+### CLI overview
+![cli](docs/images/welcome.png)
+
+## help screen
+![help](docs/images/help.png)
 ---
 
 ## what it does
