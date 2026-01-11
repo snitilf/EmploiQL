@@ -31,6 +31,13 @@ def get_connection():
         # cloud mode: connect using the full connection string
         # psycopg2 can parse the URL format directly
         connection = psycopg2.connect(database_url)
+        
+        # supabase pooler requires explicit search_path
+        # without this, tables in 'public' schema aren't found
+        cursor = connection.cursor()
+        cursor.execute("SET search_path TO public;")
+        cursor.close()
+        connection.commit()
     else:
         # local development mode: connect to local postgresql
         # psycopg2.connect() establishes a TCP connection to the postgresql server
@@ -45,7 +52,6 @@ def get_connection():
         )
     
     return connection
-
 
 @contextmanager
 def get_cursor(commit: bool = True):
