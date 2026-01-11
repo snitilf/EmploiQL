@@ -14,21 +14,36 @@ def get_connection():
     """
     create and return a raw database connection.
     
+    supports two modes:
+    1. cloud/production: uses DATABASE_URL environment variable (supabase, heroku, etc.)
+    2. local development: connects to local postgresql on localhost:5432
+    
     use this when you need fine-grained control over commits/rollbacks
     for most cases, prefer get_cursor() context manager instead
     
     caller is responsible for closing the connection
     """
-    # psycopg2.connect() establishes a TCP connection to the postgresql server
-    # and authenticates. returns a connection object for running queries.
-    # host="localhost" postgresql runs on your machine
-    # port=5432 is postgresql's default port
-    connection = psycopg2.connect(
-        dbname="EmploiQL",
-        user=os.getenv("USER"),
-        host="localhost",
-        port="5432"
-    )
+    # check for cloud database URL first (supabase, heroku, railway, etc.)
+    # format: postgresql://user:password@host:port/database
+    database_url = os.getenv("DATABASE_URL")
+    
+    if database_url:
+        # cloud mode: connect using the full connection string
+        # psycopg2 can parse the URL format directly
+        connection = psycopg2.connect(database_url)
+    else:
+        # local development mode: connect to local postgresql
+        # psycopg2.connect() establishes a TCP connection to the postgresql server
+        # and authenticates. returns a connection object for running queries.
+        # host="localhost" means postgresql runs on your machine
+        # port=5432 is postgresql's default port
+        connection = psycopg2.connect(
+            dbname="EmploiQL",
+            user=os.getenv("USER"),
+            host="localhost",
+            port="5432"
+        )
+    
     return connection
 
 
@@ -482,6 +497,12 @@ if __name__ == "__main__":
     # quick test that connection and basic operations work
     print("testing database connection...")
     
+    # show which mode we're using
+    if os.getenv("DATABASE_URL"):
+        print("mode: cloud (using DATABASE_URL)")
+    else:
+        print("mode: local (using localhost:5432)")
+    
     with get_cursor(commit=False) as cursor:
         cursor.execute("SELECT 1")
         result = cursor.fetchone()
@@ -489,7 +510,7 @@ if __name__ == "__main__":
         # result is a dict because of RealDictCursor
         # the column is auto-named "?column?" for literal SELECT
         if result:
-            print("connected successfully to EmploiQL database")
+            print("connected successfully!")
         else:
             print("connection test failed")
     
