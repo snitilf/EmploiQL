@@ -1,6 +1,6 @@
 # EmploiQL
 
-a natural language interface for querying montreal's tech job market (focused on helping me land an internship). ask questions in plain english or french and get answers from a postgresql database of job postings.
+a natural language interface for querying montreal's tech job market. ask questions in plain english or french and get answers from a postgresql database of job postings.
 
 ```
 "what are the top 10 most requested skills?"
@@ -21,6 +21,30 @@ LIMIT 10;
 │ ...        │ ...       │
 └────────────┴───────────┘
 ```
+
+---
+
+## screenshots
+
+### dashboard overview
+![dashboard](docs/images/dash.png)
+
+### natural language queries
+ask questions in plain english or french - the system converts them to sql automatically.
+
+![query example 1](docs/images/q1.png)
+
+![query example 2](docs/images/q2.png)
+
+### explore job postings
+filter and browse internships by skill, company, or location.
+
+![explore postings](docs/images/explore.png)
+
+### skills analysis
+see skill demand, frequency, and co-occurrence patterns.
+
+![skills analysis](docs/images/skills.png)
 
 ---
 
