@@ -2,6 +2,7 @@
 # uses GPT-4o to generate SQL from plain english/french questions
 
 import json
+import os
 import re
 from typing import Optional
 
@@ -9,7 +10,30 @@ from openai import OpenAI
 
 from db import get_cursor
 
-client = OpenAI()
+# lazy client initialization: only created when needed
+# allows dashboard to load without OPENAI_API_KEY set
+_client = None
+
+
+def _get_client() -> OpenAI:
+    """
+    get or create the OpenAI client.
+    lazy initialization so app can load without API key.
+    raises clear error if key not set when actually needed.
+    """
+    global _client
+    
+    if _client is None:
+        api_key = os.getenv("OPENAI_API_KEY")
+        if not api_key:
+            raise ValueError(
+                "OPENAI_API_KEY environment variable not set. "
+                "Set it with: export OPENAI_API_KEY='your-key-here'"
+            )
+        _client = OpenAI(api_key=api_key)
+    
+    return _client
+
 
 # schema context for the LLM - needs to know exact table/column names
 SCHEMA_DESCRIPTION = """
@@ -130,6 +154,9 @@ def generate_sql(question: str) -> str:
     convert natural language question to SQL query.
     uses GPT-4o for better accuracy on complex queries.
     """
+    # get client (will raise error if API key not set)
+    client = _get_client()
+    
     system_prompt = f"""You are a SQL expert. Convert natural language questions into PostgreSQL queries.
 
 {SCHEMA_DESCRIPTION}
@@ -242,7 +269,7 @@ def ask(question: str) -> dict:
         response["results"] = results
         
     except ValueError as e:
-        # validation error (unsafe query)
+        # validation error (unsafe query) or missing API key
         response["error"] = str(e)
     except Exception as e:
         # database error or API error
@@ -293,8 +320,6 @@ def ask_interactive(question: str) -> None:
 
 # testing
 if __name__ == "__main__":
-    import os
-    
     print("=" * 60)
     print("EmploiQL Text-to-SQL Test")
     print("=" * 60)
