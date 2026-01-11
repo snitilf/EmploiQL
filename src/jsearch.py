@@ -1,7 +1,7 @@
 # fetch job postings from JSearch API (via RapidAPI)
 # focused on montreal tech internships
 # uses caching to preserve free API quota (200 requests/month)
-
+import config
 import json
 import os
 from datetime import datetime

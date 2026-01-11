@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # streamlit dashboard for EmploiQL
 # run with: streamlit run src/app.py
-
+import config
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go

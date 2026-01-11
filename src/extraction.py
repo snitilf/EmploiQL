@@ -1,6 +1,6 @@
 # extraction.py - LLM-powered job posting extraction
 # uses GPT-4o-mini to convert raw job text into structured data matching our schema
-
+import config
 import json
 import os
 from typing import Optional

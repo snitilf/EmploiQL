@@ -10,3 +10,10 @@ rich>=13.0.0
 # web scraping 
 requests>=2.31.0
 beautifulsoup4>=4.12.0
+
+# environment variable loading from .env file
+python-dotenv>=1.0.0
+
+# streamlit dashboard
+streamlit>=1.28.0
+plotly>=5.18.0

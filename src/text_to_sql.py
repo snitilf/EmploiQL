@@ -1,6 +1,6 @@
 # natural language to SQL conversion
 # uses GPT-4o to generate SQL from plain english/french questions
-
+import config
 import json
 import os
 import re
