@@ -853,7 +853,6 @@ def render_skills_analysis_section():
     
     with col2:
         st.subheader("Skill Co-occurrence")
-        st.write("Skills that frequently appear together:")
         
         # find skill pairs that appear together
         with get_cursor(commit=False) as cursor:
