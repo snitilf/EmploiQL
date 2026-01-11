@@ -60,6 +60,43 @@ INTERNSHIP_PRESETS = {
     "qa": {
         "query": "QA engineer intern",
         "description": "Quality assurance and testing internships"
+    },
+    # canadian banks and financial institutions
+    "rbc": {
+        "query": "RBC intern technology",
+        "description": "RBC tech internships"
+    },
+    "td": {
+        "query": "TD Bank intern technology",
+        "description": "TD Bank tech internships"
+    },
+    "bmo": {
+        "query": "BMO intern technology",
+        "description": "BMO tech internships"
+    },
+    "scotiabank": {
+        "query": "Scotiabank intern technology",
+        "description": "Scotiabank tech internships"
+    },
+    "cibc": {
+        "query": "CIBC intern technology",
+        "description": "CIBC tech internships"
+    },
+    "national": {
+        "query": "National Bank Canada intern technology",
+        "description": "National Bank tech internships"
+    },
+    "desjardins": {
+        "query": "Desjardins intern technology",
+        "description": "Desjardins tech internships"
+    },
+    "manulife": {
+        "query": "Manulife intern technology",
+        "description": "Manulife tech internships"
+    },
+    "sunlife": {
+        "query": "Sun Life intern technology",
+        "description": "Sun Life tech internships"
     }
 }
 
