@@ -15,11 +15,7 @@ python3 src/jsearch.py --preset ml --live
 python3 src/jsearch.py --preset cyber --live
 python3 src/jsearch.py --preset qa --live
 ```
-```python
-for bank in rbc td bmo scotiabank cibc national desjardins manulife sunlife; do
-    python3 scripts/load_jsearch.py --preset $bank --mock
-done
-```
+
 ### custom Queries
 
 ```bash
@@ -49,6 +45,8 @@ python3 src/jsearch.py --list-cache      # show cached searches
 python3 src/jsearch.py --list-presets    # show available presets
 ```
 
+---
+
 ## Loading Jobs to Database (scripts/load_jsearch.py)
 
 ### load from preset
@@ -58,11 +56,6 @@ python3 scripts/load_jsearch.py --preset software --mock
 python3 scripts/load_jsearch.py --preset devops --mock
 ```
 
-```python
-for bank in rbc td bmo scotiabank cibc national desjardins manulife sunlife; do
-    python3 scripts/load_jsearch.py --preset $bank --mock
-done
-```
 ### load from Custom Query
 
 ```bash
