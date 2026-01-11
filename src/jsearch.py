@@ -181,7 +181,7 @@ def _fetch_page(query: str, location: str, page: int = 1) -> list[dict]:
         "page": page,
         "num_pages": 1,
         "country": "ca",  # canada
-        "date_posted": "month",  # jobs from last month
+        "date_posted": "week",  # jobs from last month
         # employment_types filter for internships when available
         # some postings don't have this field properly set, so we rely on query terms
     }
@@ -328,9 +328,6 @@ Examples:
             num_pages=args.pages,
             use_cache=not args.live
         )
-        
-        if jobs:
-            _print_sample(jobs)
     
     elif args.query:
         # custom search
@@ -340,9 +337,6 @@ Examples:
             num_pages=args.pages,
             use_cache=not args.live
         )
-        
-        if jobs:
-            _print_sample(jobs)
     
     else:
         # no query specified - show help
