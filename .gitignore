@@ -25,3 +25,5 @@ Thumbs.db
 # project specific
 data/jsearch_cache/
 *.log
+
+scripts/sync_to_supabase.sh

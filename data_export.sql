@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict oP8EJnfwWDkNY72dyVi8K5AuvHbQYUyLwCu9Z1VWi1sIfytIlERDF51Na9xWslb
+\restrict rJIU4VrXBlW4RaMkcANUydCTzNfXLhPxLlPRgVr7wcY9Fdg2GWr4HXvJto5WMya
 
 -- Dumped from database version 14.20 (Homebrew)
 -- Dumped by pg_dump version 14.20 (Homebrew)
@@ -1598,5 +1598,5 @@ SELECT pg_catalog.setval('public.skills_id_seq', 60, true);
 -- PostgreSQL database dump complete
 --
 
-\unrestrict oP8EJnfwWDkNY72dyVi8K5AuvHbQYUyLwCu9Z1VWi1sIfytIlERDF51Na9xWslb
+\unrestrict rJIU4VrXBlW4RaMkcANUydCTzNfXLhPxLlPRgVr7wcY9Fdg2GWr4HXvJto5WMya
 
