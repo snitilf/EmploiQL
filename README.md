@@ -32,7 +32,7 @@ LIMIT 10;
 ## help screen
 ![help](docs/images/help.png)
 
-### dashboard overview
+### streamlit dashboard overview
 ![dashboard](docs/images/dash.png)
 
 ### natural language queries
