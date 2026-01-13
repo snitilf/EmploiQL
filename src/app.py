@@ -435,7 +435,6 @@ def create_companies_chart(companies_data: list[dict]) -> go.Figure:
     
     return fig
 
-
 def create_location_pie_chart(location_data: list[dict]) -> go.Figure:
     """create pie chart of jobs by location."""
     if not location_data:
@@ -480,7 +479,6 @@ def create_location_pie_chart(location_data: list[dict]) -> go.Figure:
     )
     
     return fig
-
 
 def create_salary_by_skill_chart(salary_data: list[dict]) -> go.Figure:
     """create bar chart showing salary ranges by skill."""
@@ -541,11 +539,7 @@ def create_salary_by_skill_chart(salary_data: list[dict]) -> go.Figure:
     
     return fig
 
-
-
 # page sections
-
-
 def render_header():
     """render the main page header."""
     st.markdown('<p class="main-title">EmploiQL</p>', unsafe_allow_html=True)
