@@ -218,7 +218,7 @@ def _fetch_page(query: str, location: str, page: int = 1) -> list[dict]:
         "page": page,
         "num_pages": 1,
         "country": "ca",  # canada
-        "date_posted": "all",  # today, 3days, week, month or all
+        "date_posted": "today",  # today, 3days, week, month or all
         # employment_types filter for internships when available
         # some postings don't have this field properly set, so we rely on query terms
     }
