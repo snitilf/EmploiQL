@@ -5,7 +5,9 @@ import config
 import streamlit as st
 import plotly.express as px
 import plotly.graph_objects as go
+import re
 from typing import Optional
+from pathlib import Path
 
 from db import get_cursor, get_top_skills
 from text_to_sql import ask, validate_sql, execute_sql
@@ -23,7 +25,7 @@ st.markdown("""
 <style>
     /* main title styling */
     .main-title {
-        font-size: 2.5rem;
+        font-size: 4rem;
         font-weight: bold;
         color: #89B4FA;
         margin-bottom: 0.5rem;
@@ -31,9 +33,10 @@ st.markdown("""
     
     /* subtitle styling */
     .subtitle {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
         color: #CDD6F4;
         margin-bottom: 2rem;
+        line-height: 1.6;
     }
     
     /* metric card styling */
@@ -114,10 +117,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-
-
 # data loading functions (cached to avoid repeated database calls)
-
 
 @st.cache_data(ttl=300)  # cache for 5 minutes
 def load_dashboard_stats() -> dict:
@@ -550,7 +550,10 @@ def render_header():
     """render the main page header."""
     st.markdown('<p class="main-title">EmploiQL</p>', unsafe_allow_html=True)
     st.markdown(
-        '<p class="subtitle">Montreal Tech Internship Market Intelligence</p>',
+        '<p class="subtitle">Montreal Tech Internship Market Intelligence<br>'
+        'Query the local tech internship market using natural language. '
+        'Explore job postings, analyze skill requirements, and discover opportunities '
+        'across Montreal\'s technology sector.</p>',
         unsafe_allow_html=True
     )
 
