@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict QNQbFEOiZY5C2uxM7WWcJ1RdlYLLcAs2WGiOjHh0W6VAFcCgzeYCFC8eFW5R8KV
+\restrict SXt3WQY3OPq2akpjz1MzUNoxUfAXavz6Jojn1fC9NSyvTCJHS22LGOqUOv0FDZ4
 
 -- Dumped from database version 14.20 (Homebrew)
 -- Dumped by pg_dump version 14.20 (Homebrew)
@@ -76,6 +76,7 @@ INSERT INTO public.companies VALUES (69, 'Glowtify', 'https://glowtify.com');
 INSERT INTO public.companies VALUES (70, 'Fujitsu', NULL);
 INSERT INTO public.companies VALUES (71, 'MDA', NULL);
 INSERT INTO public.companies VALUES (72, 'Cessna Aircraft Company', 'https://cessna.txtav.com');
+INSERT INTO public.companies VALUES (73, 'Hydro Québec', 'https://www.hydroquebec.com');
 
 
 --
@@ -953,6 +954,31 @@ Publié aujourd''huijob requisition :
 R029130
 
 As the global leader in high-speed connectivity, Ciena is committed to a people-first approach. Our teams enjoy a culture focused on prioritizing a flexible work environme', NULL, NULL, 'Montreal, Quebec', NULL, 'https://www.learn4good.com/jobs/montreal/canada/info_technology/4748520581/e/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', '2026-01-13 07:09:55.157175');
+INSERT INTO public.jobs VALUES (95, 73, 'Stage Universitaire Mathématiques Et Informatique Appliquées à La Science de La Donnée', '**Concours**:
+
+- 170192**Statut**:
+
+- Temporaire**Durée**:
+
+- 4 mois**Adresse**:
+
+- 75, boul. René-Lévesque Ouest (Siège Social Hydro-Québec)**Ville**:
+
+- Montréal**Nombre de postes**:
+
+- 1**Horaire de travail**:
+
+- 5 jours/ 35 heures**Fin d''affichage**:
+- 26/01/2025**Qui nous sommes**
+
+Nous sommes fiers de produire une énergie propre et renouvelable depuis 1944. Notre vision est de mobiliser la force collective du Québec pour accélérer la transition énergétique, stimuler l’économie et bâtir un avenir durable.
+
+Travailler avec nous, c’est propulser votre carrière auprès de gens engagés et toujours prêts à innover pour relever nos défis ambitieux. Parce que notre monde change le monde
+
+Nos stages visent à offrir une expérience formatrice et valorisante où convivialité et esprit d’équipe sont au rendez-vous
+• *Ce que nous offrons**
+- Un tremplin vers une **carrière enrichissante** auprès de l’un des meilleurs employeurs du Canada.
+- Une occasion de **développer votre potentiel** en parti', NULL, NULL, 'Montreal, Quebec', NULL, 'https://ca.trabajo.org/job-3385-6469a3a7ebf046992f06703f0bfa8d85?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', '2026-01-14 06:40:28.088233');
 
 
 --
@@ -1479,6 +1505,10 @@ INSERT INTO public.job_skills VALUES (92, 30);
 INSERT INTO public.job_skills VALUES (93, 38);
 INSERT INTO public.job_skills VALUES (94, 22);
 INSERT INTO public.job_skills VALUES (94, 38);
+INSERT INTO public.job_skills VALUES (95, 22);
+INSERT INTO public.job_skills VALUES (95, 41);
+INSERT INTO public.job_skills VALUES (95, 38);
+INSERT INTO public.job_skills VALUES (95, 43);
 
 
 --
@@ -2709,6 +2739,90 @@ Il s''agit d''un nouveau rôle au sein de notre équipe en plein croissance | Th
 
 Required Skills/Qualifications:
 [''Not specified'']', '2026-01-13 07:09:48.722896', true, 64);
+INSERT INTO public.raw_postings VALUES (89, 'jsearch', 'https://ca.trabajo.org/job-3385-6469a3a7ebf046992f06703f0bfa8d85?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', 'Job Title: Stage Universitaire Mathématiques Et Informatique Appliquées à La Science de La Donnée
+Company: Hydro Québec
+Location: Montreal, Quebec CA
+Employment Type: Full-time
+Posted: 2026-01-13T22:00:00.000Z
+
+Salary: Not specified
+
+Description:
+**Concours**:
+
+- 170192**Statut**:
+
+- Temporaire**Durée**:
+
+- 4 mois**Adresse**:
+
+- 75, boul. René-Lévesque Ouest (Siège Social Hydro-Québec)**Ville**:
+
+- Montréal**Nombre de postes**:
+
+- 1**Horaire de travail**:
+
+- 5 jours/ 35 heures**Fin d''affichage**:
+- 26/01/2025**Qui nous sommes**
+
+Nous sommes fiers de produire une énergie propre et renouvelable depuis 1944. Notre vision est de mobiliser la force collective du Québec pour accélérer la transition énergétique, stimuler l’économie et bâtir un avenir durable.
+
+Travailler avec nous, c’est propulser votre carrière auprès de gens engagés et toujours prêts à innover pour relever nos défis ambitieux. Parce que notre monde change le monde
+
+Nos stages visent à offrir une expérience formatrice et valorisante où convivialité et esprit d’équipe sont au rendez-vous
+• *Ce que nous offrons**
+- Un tremplin vers une **carrière enrichissante** auprès de l’un des meilleurs employeurs du Canada.
+- Une occasion de **développer votre potentiel** en participant à des projets d’envergure.
+- Un solide** réseau de contacts**.
+- **L’accompagnement** d’une mentore ou d’un mentor chevronné.
+- La possibilité d’évoluer au sein d’une entreprise dont la culture est axée sur **l’ouverture, l’innovation, l’inclusion et la collaboration.**:
+
+- Réalisez-vous pleinement en faisant un stage qui pourrait vous mener loin
+• *Vos principales activités au quotidien**:
+Réalisez-vous en soutenant les activités d’Hydro-Québec en participant:
+
+- Aux analyses et à la résolution de problèmes en modélisation de systèmes énergétiques (simulations, optimisation, statistiques descriptives), appliquées à la planification des ressources et les analyses de fiabilité;
+- À la programmation informatique propre au domaine scientifique et technique utilisant des méthodes mathématiques/statistiques;
+- À des projets qui vous amèneront à manipuler les données, à les transformer, à les regrouper, à les filtrer, à les croiser et à analyser l’information qu’elles expriment.
+• *Les compétences que vous développerez**:
+• *Techniques**
+
+Les outils et langages informatiques tels que:
+
+- SQL
+- Python (Dash, Plotly, Budibase)
+- Excel, Power Query, Power BI
+• *Comportementales**
+- Autonomie
+- Gestion du temps et des priorités
+• *Votre formation**:
+
+- Vous êtes inscrits à temps plein à la maîtrise en génie énergétique, économie, informatique, IA ou tout autre domaine connexe.
+- Vous retournez aux études la session subséquente au stage ou stage crédité en fin de parcours pour l''obtention du diplôme.
+• *Vos perspectives d''emploi à Hydro-Québec**:
+
+- Conseiller(ère) Soutien à la gestion
+- Conseiller(ère) Analytique
+- Conseiller(ère) Planification énergétique
+- Conseiller(ère) Analyse gestion des risques
+• *Compétences essentielles à Hydro-Québec**:
+
+- Travaille en équipe
+- Agit avec ouverture et bienveillance
+- Agile et orienté vers les résultats
+- S''engage dans l''évolution
+• *Particularités**:
+
+- Horaire de travail : 35 heures par semaine.
+• *Il ne manque que vous**:
+• *Égalité des chances**
+
+Des mesures d’accommodement peuvent être offertes aux personnes en situation de handicap afin d’optimiser leur recrutement.
+
+Conformément à la norme _Vérification de la fiabilité et de l''intégrité des personnes d’Hydro-Québec _(HQ-SC-N-1001), la personne retenue fera l’objet de vérifications correspondant au niveau auquel l''emploi est assujetti. Notre fournisseur _Mintz Vérifications mondiales_ effectuera ces vérifications.
+
+Required Skills/Qualifications:
+[''Not specified'']', '2026-01-14 06:40:28.06735', true, 95);
 INSERT INTO public.raw_postings VALUES (20, 'jsearch', 'https://en-ca.whatjobs.com/jobs/apprentice-software-developer?id=100962469&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', 'Job Title: Apprentice Software Developer
 Company: WhatJobs Direct
 Location: Montreal, Quebec CA
@@ -6541,21 +6655,21 @@ Required Skills/Qualifications:
 -- Name: companies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: snitil
 --
 
-SELECT pg_catalog.setval('public.companies_id_seq', 72, true);
+SELECT pg_catalog.setval('public.companies_id_seq', 73, true);
 
 
 --
 -- Name: jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: snitil
 --
 
-SELECT pg_catalog.setval('public.jobs_id_seq', 94, true);
+SELECT pg_catalog.setval('public.jobs_id_seq', 95, true);
 
 
 --
 -- Name: raw_postings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: snitil
 --
 
-SELECT pg_catalog.setval('public.raw_postings_id_seq', 88, true);
+SELECT pg_catalog.setval('public.raw_postings_id_seq', 89, true);
 
 
 --
@@ -6569,5 +6683,5 @@ SELECT pg_catalog.setval('public.skills_id_seq', 69, true);
 -- PostgreSQL database dump complete
 --
 
-\unrestrict QNQbFEOiZY5C2uxM7WWcJ1RdlYLLcAs2WGiOjHh0W6VAFcCgzeYCFC8eFW5R8KV
+\unrestrict SXt3WQY3OPq2akpjz1MzUNoxUfAXavz6Jojn1fC9NSyvTCJHS22LGOqUOv0FDZ4
 

@@ -11,6 +11,9 @@ python3 src/jsearch.py --preset fullstack --pages 2 --live
 python3 src/jsearch.py --preset ml --live
 python3 src/jsearch.py --preset devops --pages 2 --live
 python3 src/jsearch.py --query "python intern" --live
+python3 src/jsearch.py --query "java intern" --live
+python3 src/jsearch.py --preset qa --live
+
 
 # load all fetched jobs into the database
 echo ""
@@ -35,5 +38,3 @@ else
     echo "✓ jobs loaded (see summary above for details)"
 fi
 echo "============================================================"
-
-./syncdb.sh
