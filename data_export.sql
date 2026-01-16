@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict SXt3WQY3OPq2akpjz1MzUNoxUfAXavz6Jojn1fC9NSyvTCJHS22LGOqUOv0FDZ4
+\restrict 1gz83PL5tNiBIvdqwe1L05x6ifzdZnY4Tx48R3ePBuhyMPqOtOiM3gzoS4LKtsh
 
 -- Dumped from database version 14.20 (Homebrew)
 -- Dumped by pg_dump version 14.20 (Homebrew)
@@ -77,6 +77,9 @@ INSERT INTO public.companies VALUES (70, 'Fujitsu', NULL);
 INSERT INTO public.companies VALUES (71, 'MDA', NULL);
 INSERT INTO public.companies VALUES (72, 'Cessna Aircraft Company', 'https://cessna.txtav.com');
 INSERT INTO public.companies VALUES (73, 'Hydro Québec', 'https://www.hydroquebec.com');
+INSERT INTO public.companies VALUES (74, 'CAE Inc', NULL);
+INSERT INTO public.companies VALUES (75, 'RTX', NULL);
+INSERT INTO public.companies VALUES (76, 'Cozey', 'https://www.cozey.com');
 
 
 --
@@ -979,6 +982,59 @@ Nos stages visent à offrir une expérience formatrice et valorisante où conviv
 • *Ce que nous offrons**
 - Un tremplin vers une **carrière enrichissante** auprès de l’un des meilleurs employeurs du Canada.
 - Une occasion de **développer votre potentiel** en parti', NULL, NULL, 'Montreal, Quebec', NULL, 'https://ca.trabajo.org/job-3385-6469a3a7ebf046992f06703f0bfa8d85?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', '2026-01-14 06:40:28.088233');
+INSERT INTO public.jobs VALUES (96, 74, 'OS Image & Config Software Developer Intern (Montreal)', 'A global leader in aviation and defense is inviting applications for an internship in Montreal. The ideal candidate should thrive in an inclusive culture and contribute to a future focused on safety and sustainability. By joining this company, you will be part of a community that supports both your professional and personal development. This role promises a vibrant work environment where your contributions help shape the world of tomorrow.
+
+#J-18808-Ljbffr', NULL, NULL, 'Montreal, Quebec', NULL, 'https://ca.talent.com/view?id=77183380fa4d&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', '2026-01-16 12:17:48.59621');
+INSERT INTO public.jobs VALUES (97, 36, 'Software Engineer Internship', 'About the Company
+
+Google’s mission is to organize the world’s information and make it universally accessible and useful. As a global technology leader, Google is dedicated to innovation in search, cloud computing, artificial intelligence, and more. We believe in fostering an inclusive environment where our interns can thrive, learn, and contribute to impactful projects that shape the future of technology. Join us and be part of a team that’s building the next generation of products and services.
+
+Job Description
+
+The Software Engineer Internship program at Google offers aspiring engineers an unparalleled opportunity to work on real-world projects that impact millions of users globally. Based in our vibrant Montreal office, interns will be embedded within a product development team, collaborating with experienced software engineers, and contributing to the design, development, and testing of Google’s innovative products and services. This hands-on experience is designed to challenge an', NULL, NULL, 'Montreal, Quebec', NULL, 'https://vitalalicare.com/jobs/software-engineer-internship-3/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', '2026-01-16 12:17:48.698333');
+INSERT INTO public.jobs VALUES (98, 75, 'Stage – Été 2026 – Analyste de Données /Internship – Summer 2026 – Data Analyst', 'Date Posted:
+2026-01-06
+
+Country:
+Canada
+
+Emplacement / Location:
+LOC13052 1000 Boul Marie Victorin,Longueuil,Quebec,J4G 1A1,Canada
+
+À propos de Pratt & Whitney Canada
+
+Pratt & Whitney Canada (P&WC) est un leader mondial de l’industrie aérospatiale établi à Longueuil, au Québec. Nous fabriquons des moteurs de nouvelle génération qui équipent la plus grande flotte d’avions et d’hélicoptères au monde dans les segments de l’aviation d’affaires, de l’aviation générale et de l’aviation régionale.
+
+En près de 100 ans, nous avons réalisé de nombreuses percées dans le développement de moteurs qui assurent le transport de marchandises et de matériel, luttent contre les feux de forêt et effectuent le transport de passagers.
+
+Un employeur de choix
+
+Pratt & Whitney Canada a été reconnue comme l’un des 10 meilleurs employeurs au Canada en 2025 selon Forbes, en plus d’être classée au premier rang des employeurs dans l’industrie de l’aérospatiale et de la défense au pays! Notre siège social figure su', NULL, NULL, 'Longueuil, Quebec', NULL, 'https://careers.rtx.com/global/en/job/01809650/Stage-%C3%89t%C3%A9-2026-Analyste-de-Donn%C3%A9es-Internship-Summer-2026-Data-Analyst?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', '2026-01-16 12:17:49.028798');
+INSERT INTO public.jobs VALUES (99, 75, 'Stage - été 2026 - Science des données et Analytique d’affaires / Internship - Summer 2026 - Data Science and Business Analytics', 'Date Posted:
+2026-01-07
+
+Country:
+Canada
+
+Emplacement / Location:
+LOC13052 1000 Boul Marie Victorin,Longueuil,Quebec,J4G 1A1,Canada
+
+À propos de Pratt & Whitney Canada
+
+Pratt & Whitney Canada (P&WC) est un leader mondial de l’industrie aérospatiale établi à Longueuil, au Québec. Nous fabriquons des moteurs de nouvelle génération qui équipent la plus grande flotte d’avions et d’hélicoptères au monde dans les segments de l’aviation d’affaires, de l’aviation générale et de l’aviation régionale.
+
+En près de 100 ans, nous avons réalisé de nombreuses percées dans le développement de moteurs qui assurent le transport de marchandises et de matériel, luttent contre les feux de forêt et effectuent le transport de passagers.
+
+Un employeur de choix
+
+Pratt & Whitney Canada a été reconnue comme l’un des 10 meilleurs employeurs au Canada en 2025 selon Forbes, en plus d’être classée au premier rang des employeurs dans l’industrie de l’aérospatiale et de la défense au pays! Notre siège social figure su', NULL, NULL, 'Longueuil, Quebec', NULL, 'https://careers.rtx.com/global/en/job/01808174/Stage-%C3%A9t%C3%A9-2026-Science-des-donn%C3%A9es-et-Analytique-d%E2%80%99affaires-Internship-Summer-2026-Data-Science-and-Business-Analytics?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', '2026-01-16 12:17:49.071588');
+INSERT INTO public.jobs VALUES (100, 76, 'IT & Security Intern', 'About Cozey
+
+At Cozey, we’re not just selling furniture; we’re striving to enhance the living spaces of our customers across Canada & the United States. Our vision is straightforward - to become the world’s leading furniture company. We value data, learning, and adaptability, ensuring that our operations are as dynamic as the market we operate in. We believe in providing a platform where ideas are heard, respected, and implemented, and where every team member is a key player in our journey.
+
+The mission of the IT & Security Intern at Cozey
+
+The IT & Security Intern will support Cozey’s IT & Security team in delivering reliable day-to-day technology support and strengthening the company’s security posture. Working from an operations-first perspective, the intern will assist with ticket triage, endpoint remediation, and foundational identity and access tasks—helping resolve employee issues, respond to security alerts, and improve device security. The role also plays an important part in ', NULL, NULL, 'Mount Royal, Quebec', NULL, 'https://ca.linkedin.com/jobs/view/it-security-intern-at-cozey-4363643506?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', '2026-01-16 12:17:49.172305');
 
 
 --
@@ -1509,6 +1565,20 @@ INSERT INTO public.job_skills VALUES (95, 22);
 INSERT INTO public.job_skills VALUES (95, 41);
 INSERT INTO public.job_skills VALUES (95, 38);
 INSERT INTO public.job_skills VALUES (95, 43);
+INSERT INTO public.job_skills VALUES (97, 22);
+INSERT INTO public.job_skills VALUES (97, 23);
+INSERT INTO public.job_skills VALUES (97, 31);
+INSERT INTO public.job_skills VALUES (97, 27);
+INSERT INTO public.job_skills VALUES (97, 30);
+INSERT INTO public.job_skills VALUES (98, 30);
+INSERT INTO public.job_skills VALUES (98, 43);
+INSERT INTO public.job_skills VALUES (99, 22);
+INSERT INTO public.job_skills VALUES (99, 41);
+INSERT INTO public.job_skills VALUES (99, 38);
+INSERT INTO public.job_skills VALUES (99, 27);
+INSERT INTO public.job_skills VALUES (99, 30);
+INSERT INTO public.job_skills VALUES (99, 60);
+INSERT INTO public.job_skills VALUES (100, 49);
 
 
 --
@@ -2838,6 +2908,59 @@ Program Highlights: Hands-on training in modern programming languages (e.g., Pyt
 
 Required Skills/Qualifications:
 [''Not specified'']', '2026-01-11 09:41:41.317188', true, 26);
+INSERT INTO public.raw_postings VALUES (91, 'jsearch', 'https://vitalalicare.com/jobs/software-engineer-internship-3/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', 'Job Title: Software Engineer Internship
+Company: Google
+Location: Montreal, Quebec CA
+Employment Type: Internship
+Posted: 2026-01-15T23:00:00.000Z
+
+Salary: Not specified
+
+Description:
+About the Company
+
+Google’s mission is to organize the world’s information and make it universally accessible and useful. As a global technology leader, Google is dedicated to innovation in search, cloud computing, artificial intelligence, and more. We believe in fostering an inclusive environment where our interns can thrive, learn, and contribute to impactful projects that shape the future of technology. Join us and be part of a team that’s building the next generation of products and services.
+
+Job Description
+
+The Software Engineer Internship program at Google offers aspiring engineers an unparalleled opportunity to work on real-world projects that impact millions of users globally. Based in our vibrant Montreal office, interns will be embedded within a product development team, collaborating with experienced software engineers, and contributing to the design, development, and testing of Google’s innovative products and services. This hands-on experience is designed to challenge and grow your technical skills while providing a deep dive into Google’s engineering culture and practices.
+
+Key Responsibilities
+• Contribute to the design, development, testing, and deployment of software solutions.
+• Write clean, maintainable, and efficient code in various programming languages.
+• Collaborate with team members on code reviews, debugging, and feature implementation.
+• Participate in team meetings and contribute to technical discussions and problem-solving.
+• Learn and adapt to new technologies and programming paradigms.
+• Document code, designs, and technical specifications as needed.
+
+Required Skills
+• Currently pursuing a Bachelor''s, Master''s, or PhD degree in Computer Science or a related technical field.
+• Experience in one or more general-purpose programming languages (e.g., C++, Java, Python, Go).
+• Solid understanding of data structures and algorithms.
+• Strong problem-solving and analytical skills.
+• Ability to work effectively in a team environment.
+
+Preferred Qualifications
+• Experience with large-scale software systems or distributed systems.
+• Familiarity with web technologies (e.g., HTML, CSS, JavaScript) or mobile development (iOS/Android).
+• Completed at least one prior software engineering internship or relevant project experience.
+• Strong academic record.
+• Excellent communication and interpersonal skills.
+
+Perks & Benefits
+• Competitive salary and relocation support.
+• Hands-on experience with cutting-edge technologies.
+• Mentorship from experienced Google engineers.
+• Access to internal tech talks, workshops, and learning resources.
+• Networking opportunities with Google employees and fellow interns.
+• Opportunity to impact real Google products and users.
+• On-site amenities (cafeterias, fitness centers, etc., where available).
+• Potential for full-time employment opportunities upon graduation.
+
+Get Latest Jobs, And Visa Sponsorship Updates
+
+Required Skills/Qualifications:
+[''Not specified'']', '2026-01-16 12:17:48.665649', true, 97);
 INSERT INTO public.raw_postings VALUES (21, 'jsearch', 'https://www.recruit.net/job/co-op-developer-tools-engineer-jobs/9172EB1D98A22F87?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', 'Job Title: Co-op: Developer Tools Engineer
 Company: Safety CLI
 Location: Montreal, Quebec CA
@@ -2992,6 +3115,136 @@ InterDigital est un employeur offrant l''égalité des chances en matière d''em
 
 Required Skills/Qualifications:
 [''Not specified'']', '2026-01-11 09:41:41.419263', true, 28);
+INSERT INTO public.raw_postings VALUES (93, 'jsearch', 'https://careers.rtx.com/global/en/job/01808174/Stage-%C3%A9t%C3%A9-2026-Science-des-donn%C3%A9es-et-Analytique-d%E2%80%99affaires-Internship-Summer-2026-Data-Science-and-Business-Analytics?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', 'Job Title: Stage - été 2026 - Science des données et Analytique d’affaires / Internship - Summer 2026 - Data Science and Business Analytics
+Company: RTX
+Location: Longueuil, Quebec CA
+Employment Type: Full-time
+Posted: 2026-01-16T00:00:00.000Z
+
+Salary: Not specified
+
+Description:
+Date Posted:
+2026-01-07
+
+Country:
+Canada
+
+Emplacement / Location:
+LOC13052 1000 Boul Marie Victorin,Longueuil,Quebec,J4G 1A1,Canada
+
+À propos de Pratt & Whitney Canada
+
+Pratt & Whitney Canada (P&WC) est un leader mondial de l’industrie aérospatiale établi à Longueuil, au Québec. Nous fabriquons des moteurs de nouvelle génération qui équipent la plus grande flotte d’avions et d’hélicoptères au monde dans les segments de l’aviation d’affaires, de l’aviation générale et de l’aviation régionale.
+
+En près de 100 ans, nous avons réalisé de nombreuses percées dans le développement de moteurs qui assurent le transport de marchandises et de matériel, luttent contre les feux de forêt et effectuent le transport de passagers.
+
+Un employeur de choix
+
+Pratt & Whitney Canada a été reconnue comme l’un des 10 meilleurs employeurs au Canada en 2025 selon Forbes, en plus d’être classée au premier rang des employeurs dans l’industrie de l’aérospatiale et de la défense au pays! Notre siège social figure sur le palmarès des meilleurs employeurs dans la région de Montréal. Ensemble, ces distinctions confirment notre réputation d’employeur de choix dans la région de Montréal, au Canada et dans le monde.
+
+Dates du stage : 04 mai au 21 août 2026
+
+Emplacement : 1000 Bd Marie-Victorin, Longueuil, J4G 1A1, Québec, Canada.
+
+Horaire : En présentiel, heures flexibles, 5 jours/semaine.
+
+Consultez notre chaîne YouTube : https://www.youtube.com/@PrattWhitneyCa
+
+Notre site web : https://www.pwc.ca/fr
+
+À quoi ressemblera votre quotidien ?
+
+Soutenir l''équipe de transformation numérique pour la gestion de l''approvisionnement, la collecte de données (exploration de données), la fourniture d''informations, l''aide aux solutions d''automatisation et la création des rapports (tableaux de bord).
+
+Le candidat idéal doit avoir une solide expérience dans l''utilisation d''une variété de méthodes d''exploration de données/d''analyse de données, l''utilisation d''une variété d''outils de création de rapports, la construction et la mise en œuvre de modèles et la création/l''exécution de simulations.
+
+Doit être à l''aise de travailler avec un large éventail de parties prenantes et d''équipes fonctionnelles. Le bon candidat aura une passion pour découvrir des solutions cachées dans de grands ensembles de données et travailler avec des collègues pour améliorer les résultats commerciaux.
+
+Qu’est-ce qu’il vous faut pour réussir ?
+• Être éligible à travailler au Canada.
+• Être inscrit dans une université canadienne pendant toute la durée de votre stage.
+• Être en mesure de travailler sur place dans la province où vous êtes embauché, le cas échéant.
+• Poursuivre des études Science des données et Analytique d''affaires.
+• Excellentes compétences en communication en français (parlé/écrit). L''anglais est un atout.
+• Pensée analytique, Adaptabilité, Soucieux des details, Travail en équipe.
+Logiciels: SQL Server, Excel, SAP, Python, Hive SQL, C++, Power BI, SharePoint.
+
+☐ Anglais non requis ☐ Anglais de base ☒ Anglais fonctionnel ☐ Bilingue
+
+Travailler chez Pratt & Whitney Canada
+
+Le masculin est utilisé sans discrimination et uniquement dans le but d’alléger le texte. Nous étudierons la demande d’emploi de tous les candidats qualifiés.
+
+Chez Pratt & Whitney Canada, nous allions avec passion, audace et rigueur pour concevoir, fabriquer et entretenir les moteurs d’aéronefs les plus avancés et les plus fiables au monde. Notre travail et la qualité de nos produits contribuent au succès de nos clients, qui à leur tour sauvent des vies, soutiennent le commerce, connectent les communautés et protègent les libertés.
+
+Chez Pratt & Whitney Canada, vous avez l’occasion de faire une différence tous les jours ; il suffit de lever les yeux. Êtes-vous prêt à vous dépasser ?
+
+Le candidat sélectionné devra passer une vérification des antécédents judiciaires ainsi qu''à toute autorisation applicable relative à la gestion et au transfert de marchandises contrôlées. L''embauche est conditionnelle à la réussite de ces vérifications et à l''obtention des autorisations requises. Le non-respect de ces exigences entraînera le retrait de l''offre d''emploi.
+
+-------------------------------------------------- English ------------------------------------------------------------
+
+About Pratt & Whitney Canada
+
+Pratt & Whitney Canada (P&WC) is a global leader in the aerospace industry, headquartered in Longueuil, Quebec. We manufacture next-generation engines that power the world’s largest fleet of business, general aviation, and regional aircraft and helicopters.
+
+For nearly 100 years, we have pioneered advancements in engine development, supporting cargo and equipment, transportation, wildfire suppression, and passenger travel.
+
+An Employer of Choice
+
+Pratt & Whitney Canada was recognized as one of Canada’s Top 10 Employers in 2025 by Forbes and ranked #1 in the aerospace and defense industry in the country. Our headquarters are also listed among the top employers in the Montreal region. These accolades reinforce our reputation as an employer of choice in Montreal, Canada, and worldwide.
+
+Internship Dates: May 4th to August 21st , 2026.
+
+Location: 1000 Bd Marie-Victorin, Longueuil, J4G 1A1, Québec, Canada.
+
+Schedule: On-site only, flexible hours, 5 days per week.
+
+Check out our YouTube channel: https://www.youtube.com/@PrattWhitneyCa
+
+Our website: https://www.pwc.ca/en
+
+What your day to day will look like:
+
+Support the digital transformation team for supply management, gathering data (data mining), providing insights, help with automation and reporting solutions (dashboards).
+
+The ideal candidate must have strong experience using a variety of data mining/data analysis methods, using a variety of reporting tools, building, and implementing models and creating/running simulations.
+
+Must be comfortable working with a wide range of stakeholders and functional teams. The right candidate will have a passion for discovering solutions hidden in large data sets and working with colleagues to improve business outcomes.
+
+What you need to be successful:
+• Be eligible to work in Canada.
+• Be enrolled in a Canadian university throughout your internship.
+• Be able to work on-site in the province where you are hired if applicable.
+• Pursuing a degree in Data Science and Business Analytics.
+• Excellent communication skills in French (spoken/written). English is an asset .
+• Analytical thinking, Adaptability, Detail Oriented, Teamwork.
+Software: SQL Server, Excel, SAP, Python, Hive SQL, C++, Power BI, SharePoint.
+
+☐ English is not required ☐ Basic level ☒ Functional level ☐ Good knowledge
+
+Working at Pratt & Whitney Canada
+
+The masculine pronoun is used without discrimination and solely for the purpose of making the text easier to read. We will consider applications from all qualified candidates.
+
+At Pratt & Whitney Canada, we combine passion, boldness, and precision to design, manufacture, and maintain the most advanced and reliable aircraft engines in the world. Our work and the quality of our products contribute to the success of our customers, who in turn save lives, support commerce, connect communities, and protect freedoms.
+
+At Pratt & Whitney Canada, you have the opportunity to make a difference every day—just look up. Are you ready to go beyond?
+
+The selected candidate will be required to complete a criminal background check and any applicable clearances with respect to the handling and transfer of controlled goods. Employment is conditional upon the successful completion of these checks and obtaining the required clearances. Failure to do so will result in the withdrawal of the employment offer.
+
+RTX adhère aux principes d’égalité en matière de recrutement et d’embauche. Toutes les candidatures de postulants qualifiés seront examinées avec attention, sans distinction d’origine ethnique, de couleur, de religion, de genre, d’orientation ou d’identité sexuelle, d’origine nationale, d’âge, de handicap, de statut d’ancien combattant protégé ou de toute autre caractéristique protégée par la loi.
+
+RTX adheres to the principles of equal employment. All qualified applications will be given careful consideration without regard to ethnicity, color, religion, gender, sexual orientation or identity, national origin, age, disability, protected veteran status or any other characteristic protected by law.
+
+Si vous postulez à un emploi via notre page Carrières, l''utilisation de vos informations personnelles par RTX est régie par l''Avis de confidentialité des candidatures. Cliquez ci-dessous pour sélectionner la version dans la langue de votre choix.
+
+Privacy Policy and Terms:
+
+Click on this link to read the Policy and Terms
+
+Required Skills/Qualifications:
+[''Not specified'']', '2026-01-16 12:17:49.062654', true, 99);
 INSERT INTO public.raw_postings VALUES (23, 'jsearch', 'https://en-ca.whatjobs.com/jobs/developer?id=100960067&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', 'Job Title: Junior Software Developer - Apprenticeship Program, Remote
 Company: WhatJobs Direct
 Location: Montreal, Quebec CA
@@ -5883,6 +6136,21 @@ Send us your application, we want to hear from you!
 
 Required Skills/Qualifications:
 [''Not specified'']', '2026-01-13 07:09:50.879564', true, 83);
+INSERT INTO public.raw_postings VALUES (90, 'jsearch', 'https://ca.talent.com/view?id=77183380fa4d&utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', 'Job Title: OS Image & Config Software Developer Intern (Montreal)
+Company: CAE Inc
+Location: Montreal, Quebec CA
+Employment Type: Full-time
+Posted: 2026-01-16T00:00:00.000Z
+
+Salary: Not specified
+
+Description:
+A global leader in aviation and defense is inviting applications for an internship in Montreal. The ideal candidate should thrive in an inclusive culture and contribute to a future focused on safety and sustainability. By joining this company, you will be part of a community that supports both your professional and personal development. This role promises a vibrant work environment where your contributions help shape the world of tomorrow.
+
+#J-18808-Ljbffr
+
+Required Skills/Qualifications:
+[''Not specified'']', '2026-01-16 12:17:48.532428', true, 96);
 INSERT INTO public.raw_postings VALUES (78, 'jsearch', 'https://www.learn4good.com/jobs/montreal/canada/info_technology/4781581602/e/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', 'Job Title: Summer Co-op: Junior AI Developer
 Company: CGI
 Location: Montreal, Quebec CA
@@ -6014,6 +6282,142 @@ Skills:
 
 Required Skills/Qualifications:
 [''Not specified'']', '2026-01-13 07:09:50.953692', true, 84);
+INSERT INTO public.raw_postings VALUES (92, 'jsearch', 'https://careers.rtx.com/global/en/job/01809650/Stage-%C3%89t%C3%A9-2026-Analyste-de-Donn%C3%A9es-Internship-Summer-2026-Data-Analyst?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', 'Job Title: Stage – Été 2026 – Analyste de Données /Internship – Summer 2026 – Data Analyst
+Company: RTX
+Location: Longueuil, Quebec CA
+Employment Type: Full-time
+Posted: 2026-01-16T00:00:00.000Z
+
+Salary: Not specified
+
+Description:
+Date Posted:
+2026-01-06
+
+Country:
+Canada
+
+Emplacement / Location:
+LOC13052 1000 Boul Marie Victorin,Longueuil,Quebec,J4G 1A1,Canada
+
+À propos de Pratt & Whitney Canada
+
+Pratt & Whitney Canada (P&WC) est un leader mondial de l’industrie aérospatiale établi à Longueuil, au Québec. Nous fabriquons des moteurs de nouvelle génération qui équipent la plus grande flotte d’avions et d’hélicoptères au monde dans les segments de l’aviation d’affaires, de l’aviation générale et de l’aviation régionale.
+
+En près de 100 ans, nous avons réalisé de nombreuses percées dans le développement de moteurs qui assurent le transport de marchandises et de matériel, luttent contre les feux de forêt et effectuent le transport de passagers.
+
+Un employeur de choix
+
+Pratt & Whitney Canada a été reconnue comme l’un des 10 meilleurs employeurs au Canada en 2025 selon Forbes, en plus d’être classée au premier rang des employeurs dans l’industrie de l’aérospatiale et de la défense au pays! Notre siège social figure sur le palmarès des meilleurs employeurs dans la région de Montréal. Ensemble, ces distinctions confirment notre réputation d’employeur de choix dans la région de Montréal, au Canada et dans le monde.
+
+Pourquoi rejoindre notre équipe ?
+
+Le stagiaire contribuera à l’analyse des données pour soutenir la prise de décisions stratégiques, améliorer les processus de gestion des données, et optimiser les opérations en utilisant des outils analytiques avancés, des plateformes d''automatisation, ainsi que des solutions de gestion de bases de données.
+
+Dates du stage : 04 mai au 21 août 2026
+
+Emplacement : 1000 Bd Marie-Victorin, Longueuil, J4G 1A1, Québec, Canada.
+
+Horaire : En présentiel, heures flexibles, 5 jours/semaine.
+
+Consultez notre chaîne YouTube : https://www.youtube.com/@PrattWhitneyCa
+
+Notre site web : https://www.pwc.ca/fr
+
+À quoi ressemblera votre quotidien ?
+
+Le stagiaire analyste de données sera responsable de :
+• Analyser et interpréter les données pour fournir des informations pertinentes et exploitables.
+• Utiliser la suite Microsoft Power Platform (incluant Power BI, Power Automate, et autres outils) pour créer des rapports interactifs, des tableaux de bord, et automatiser les processus.
+• Participer à la mise en œuvre et à l''optimisation des flux ETL (Extract, Transform, Load) et des processus de gestion de bases de données.
+• Collaborer avec les équipes internes pour intégrer des API, utiliser Databricks pour les opérations de traitement de données, et assurer une gestion efficace des données.
+• Contribuer à l''amélioration de l''expérience utilisateur (UI/UX) des tableaux de bord et des rapports.
+
+Qu’est-ce qu’il vous faut pour réussir ?
+• Être éligible à travailler au Canada.
+• Être inscrit dans une université canadienne pendant toute la durée de votre stage.
+• Être en mesure de travailler sur place dans la province où vous êtes embauché, le cas échéant.
+• Compétence en analyse de données et expérience avec la suite Microsoft Power Platform (Power BI, Power Automate, etc.).
+• Expérience en gestion de bases de données, flux ETL, Databricks, et intégration d''API.
+• Des connaissances en conception front-end (UI/UX) pour les tableaux de bord et en méthodologies Agile sont des atouts.
+
+Ce poste s’inscrit dans un milieu de travail francophone, néanmoins il nécessite une très bonne connaissance de l’anglais pour lire et comprendre, sur une base quotidienne, de la documentation et des termes techniques qui peuvent émaner d’organisations internationales, ainsi que pour écrire et communiquer en anglais avec des clients, des fournisseurs ou des collègues internationaux.
+
+Travailler chez Pratt & Whitney Canada
+
+Le masculin est utilisé sans discrimination et uniquement dans le but d’alléger le texte. Nous étudierons la demande d’emploi de tous les candidats qualifiés.
+
+Chez Pratt & Whitney Canada, nous allions avec passion, audace et rigueur pour concevoir, fabriquer et entretenir les moteurs d’aéronefs les plus avancés et les plus fiables au monde. Notre travail et la qualité de nos produits contribuent au succès de nos clients, qui à leur tour sauvent des vies, soutiennent le commerce, connectent les communautés et protègent les libertés.
+
+Chez Pratt & Whitney Canada, vous avez l’occasion de faire une différence tous les jours ; il suffit de lever les yeux. Êtes-vous prêt à vous dépasser ?
+
+Le candidat sélectionné devra passer une vérification des antécédents judiciaires ainsi qu''à toute autorisation applicable relative à la gestion et au transfert de marchandises contrôlées. L''embauche est conditionnelle à la réussite de ces vérifications et à l''obtention des autorisations requises. Le non-respect de ces exigences entraînera le retrait de l''offre d''emploi.
+
+About Pratt & Whitney Canada
+
+Pratt & Whitney Canada (P&WC) is a global leader in the aerospace industry, headquartered in Longueuil, Quebec. We manufacture next-generation engines that power the world’s largest fleet of business, general aviation, and regional aircraft and helicopters.
+
+For nearly 100 years, we have pioneered advancements in engine development, supporting cargo and equipment, transportation, wildfire suppression, and passenger travel.
+
+An Employer of Choice
+
+Pratt & Whitney Canada was recognized as one of Canada’s Top 10 Employers in 2025 by Forbes and ranked #1 in the aerospace and defense industry in the country. Our headquarters are also listed among the top employers in the Montreal region. These accolades reinforce our reputation as an employer of choice in Montreal, Canada, and worldwide.
+
+Why join our team?
+
+The intern will contribute to data analysis to support strategic decision-making, improve data management processes, and optimize operations using advanced analytical tools, automation platforms, and database management solutions.
+
+The position is based at our Longueuil location, from Monday to Friday, with flexible hours and exclusively on-site.
+
+Internship Dates: May 4th to August 21st , 2026.
+
+Location: 1000 Bd Marie-Victorin, Longueuil, J4G 1A1, Québec, Canada.
+
+Schedule: On-site only, flexible hours, 5 days per week.
+
+Check out our YouTube channel: https://www.youtube.com/@PrattWhitneyCa
+
+Our website: https://www.pwc.ca/en
+
+The data analyst intern will be responsible for:
+• Analyzing and interpreting data to provide actionable insights.
+• Using the Microsoft Power Platform suite (including Power BI, Power Automate, and other tools) to create interactive reports, dashboards, and automate processes.
+• Participating in the implementation and optimization of ETL (Extract, Transform, Load) pipelines and database management processes.
+• Collaborating with internal teams to integrate APIs, leverage Databricks for data processing operations, and ensure effective data management.
+• Contributing to the improvement of user experience (UI/UX) for dashboards and reports.
+
+What do you need to be successful?
+• Be eligible to work in Canada.
+• Be enrolled in a Canadian university throughout your internship.
+• Be able to work on-site in the province where you are hired if applicable.
+• Proficiency in data analysis and experience with the Microsoft Power Platform suite (Power BI, Power Automate, etc.).
+• Experience in database management, ETL pipelines, Databricks, and API integration.
+• Basic front-end design (UI/UX) for dashboards and knowledge of Agile methodologies are a plus.
+
+This position is part of a French-speaking work environment, it requires a very good knowledge of English to read and understand, on a daily basis, documentation and technical terms that may emanate from international organizations, as well as to write and communicate in English with customers, suppliers or international colleagues.
+
+Working at Pratt & Whitney Canada
+
+The masculine pronoun is used without discrimination and solely for the purpose of making the text easier to read. We will consider applications from all qualified candidates.
+
+At Pratt & Whitney Canada, we combine passion, boldness, and precision to design, manufacture, and maintain the most advanced and reliable aircraft engines in the world. Our work and the quality of our products contribute to the success of our customers, who in turn save lives, support commerce, connect communities, and protect freedoms.
+
+At Pratt & Whitney Canada, you have the opportunity to make a difference every day—just look up. Are you ready to go beyond?
+
+The selected candidate will be required to complete a criminal background check and any applicable clearances with respect to the handling and transfer of controlled goods. Employment is conditional upon the successful completion of these checks and obtaining the required clearances. Failure to do so will result in the withdrawal of the employment offer.
+
+RTX adhère aux principes d’égalité en matière de recrutement et d’embauche. Toutes les candidatures de postulants qualifiés seront examinées avec attention, sans distinction d’origine ethnique, de couleur, de religion, de genre, d’orientation ou d’identité sexuelle, d’origine nationale, d’âge, de handicap, de statut d’ancien combattant protégé ou de toute autre caractéristique protégée par la loi.
+
+RTX adheres to the principles of equal employment. All qualified applications will be given careful consideration without regard to ethnicity, color, religion, gender, sexual orientation or identity, national origin, age, disability, protected veteran status or any other characteristic protected by law.
+
+Si vous postulez à un emploi via notre page Carrières, l''utilisation de vos informations personnelles par RTX est régie par l''Avis de confidentialité des candidatures. Cliquez ci-dessous pour sélectionner la version dans la langue de votre choix.
+
+Privacy Policy and Terms:
+
+Click on this link to read the Policy and Terms
+
+Required Skills/Qualifications:
+[''Not specified'']', '2026-01-16 12:17:49.009155', true, 98);
 INSERT INTO public.raw_postings VALUES (79, 'jsearch', 'https://www.eluta.ca/spl/machine-learning-phd-internship-realtime-llms-for-games-seed-8-months-doctorant-estagiaire-9b08a3ae596e658597734c55f1b62469?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', 'Job Title: Machine Learning PhD Internship - Realtime LLMs for Games - SEED - 8 Months/ Doctorant.e stagiaire - grands modèles de langage en temps réel appliqués...
 Company: Electronic Arts Inc. / EA
 Location: Montreal, Quebec CA
@@ -6099,6 +6503,53 @@ LinkedInID
 
 Required Skills/Qualifications:
 [''Not specified'']', '2026-01-13 07:09:51.108625', true, 85);
+INSERT INTO public.raw_postings VALUES (94, 'jsearch', 'https://ca.linkedin.com/jobs/view/it-security-intern-at-cozey-4363643506?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', 'Job Title: IT & Security Intern
+Company: Cozey
+Location: Mount Royal, Quebec CA
+Employment Type: Internship
+Posted: 2026-01-16T08:00:00.000Z
+
+Salary: Not specified
+
+Description:
+About Cozey
+
+At Cozey, we’re not just selling furniture; we’re striving to enhance the living spaces of our customers across Canada & the United States. Our vision is straightforward - to become the world’s leading furniture company. We value data, learning, and adaptability, ensuring that our operations are as dynamic as the market we operate in. We believe in providing a platform where ideas are heard, respected, and implemented, and where every team member is a key player in our journey.
+
+The mission of the IT & Security Intern at Cozey
+
+The IT & Security Intern will support Cozey’s IT & Security team in delivering reliable day-to-day technology support and strengthening the company’s security posture. Working from an operations-first perspective, the intern will assist with ticket triage, endpoint remediation, and foundational identity and access tasks—helping resolve employee issues, respond to security alerts, and improve device security. The role also plays an important part in supporting Cozey’s cybersecurity awareness efforts, helping employees adopt secure practices through coordination, communication, and follow-up. This opportunity is ideal for a highly analytical, growth-oriented student pursuing studies in Information Technology, Cybersecurity, or a related field.
+
+What You''ll Be Doing
+• Provide first-line IT support to employees, including device and access troubleshooting.
+• Triage and manage IT support tickets, escalating issues as needed and documenting resolutions.
+• Review and analyze security alerts from internal tools and our external SOC partner, performing initial investigation and follow-up.
+• Support endpoint security remediation by coordinating updates, addressing vulnerabilities, and tracking compliance.
+• Assist with identity and access improvements, including application inventory and SSO enablement activities.
+• Support cybersecurity awareness initiatives through coordination, employee communications, and program tracking.
+
+What We''re Looking For
+• Currently enrolled in, or recently graduated from, a program related to Information Technology, Cybersecurity, Computer Science, or a related field.
+• Strong interest in IT operations, security, and how technology supports people at scale.
+• Comfortable troubleshooting technical issues and following documented processes.
+• Organized, detail-oriented, and able to manage multiple tasks independently.
+• Clear written and verbal communication skills.
+• Curious, proactive, and eager to learn new tools and systems.
+• Able to communicate clearly with non-technical teammates and provide friendly, supportive assistance.
+• Trustworthy and able to handle sensitive information with professionalism and discretion.
+
+What We Offer
+• Dynamic and inclusive work culture
+• Competitive internship salary: $20/hour
+• Full-time schedule: 40 hours/week from Monday to Friday
+• Opportunity to learn and grow in a fast-paced, innovative environment
+• Access to a dog-friendly office space
+• Rewarding work experience
+
+Ready to build the best customer experience in furniture and help create a world where everyone feels at home? Apply now to be part of the Cozey team!
+
+Required Skills/Qualifications:
+[''Not specified'']', '2026-01-16 12:17:49.160097', true, 100);
 INSERT INTO public.raw_postings VALUES (80, 'jsearch', 'https://ca.bebee.com/job/243a72fa5d5fedc7b4237e9929a61c58?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic', 'Job Title: Machine Learning PhD Internship
 Company: SEED (Electronic Arts)
 Location: Montreal, Quebec CA
@@ -6655,21 +7106,21 @@ Required Skills/Qualifications:
 -- Name: companies_id_seq; Type: SEQUENCE SET; Schema: public; Owner: snitil
 --
 
-SELECT pg_catalog.setval('public.companies_id_seq', 73, true);
+SELECT pg_catalog.setval('public.companies_id_seq', 76, true);
 
 
 --
 -- Name: jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: snitil
 --
 
-SELECT pg_catalog.setval('public.jobs_id_seq', 95, true);
+SELECT pg_catalog.setval('public.jobs_id_seq', 100, true);
 
 
 --
 -- Name: raw_postings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: snitil
 --
 
-SELECT pg_catalog.setval('public.raw_postings_id_seq', 89, true);
+SELECT pg_catalog.setval('public.raw_postings_id_seq', 94, true);
 
 
 --
@@ -6683,5 +7134,5 @@ SELECT pg_catalog.setval('public.skills_id_seq', 69, true);
 -- PostgreSQL database dump complete
 --
 
-\unrestrict SXt3WQY3OPq2akpjz1MzUNoxUfAXavz6Jojn1fC9NSyvTCJHS22LGOqUOv0FDZ4
+\unrestrict 1gz83PL5tNiBIvdqwe1L05x6ifzdZnY4Tx48R3ePBuhyMPqOtOiM3gzoS4LKtsh
 

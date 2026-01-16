@@ -1,5 +1,4 @@
 # fetch job postings from JSearch API (via RapidAPI)
-# focused on montreal tech internships
 # uses caching to preserve free API quota (200 requests/month)
 import config
 import json
@@ -103,7 +102,6 @@ INTERNSHIP_PRESETS = {
 # default location focused on montreal
 DEFAULT_LOCATION = "Montreal, Canada"
 
-
 def search_jobs(
     query: str = "software developer intern",
     location: str = DEFAULT_LOCATION,
@@ -166,7 +164,6 @@ def search_jobs(
     
     return all_jobs
 
-
 def search_preset(
     preset: str,
     location: str = DEFAULT_LOCATION,
@@ -200,7 +197,6 @@ def search_preset(
         use_cache=use_cache
     )
 
-
 def _fetch_page(query: str, location: str, page: int = 1) -> list[dict]:
     """
     fetch a single page of results from JSearch.
@@ -218,7 +214,7 @@ def _fetch_page(query: str, location: str, page: int = 1) -> list[dict]:
         "page": page,
         "num_pages": 1,
         "country": "ca",  # canada
-        "date_posted": "3 days",  # today, 3days, week, month or all
+        "date_posted": "today",  # today, 3days, week, month or all
         # employment_types filter for internships when available
         # some postings don't have this field properly set, so we rely on query terms
     }

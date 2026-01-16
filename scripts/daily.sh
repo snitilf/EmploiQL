@@ -1,25 +1,21 @@
 #!/bin/bash
 # script ran daily to fetch jobs
 
-python3 src/jsearch.py --preset software --pages 2 --live
-python3 src/jsearch.py --preset developer --pages 2 --live
+python3 src/jsearch.py --preset software --live
+python3 src/jsearch.py --preset developer --live
 python3 src/jsearch.py --preset data --live
 python3 src/jsearch.py --preset cyber --live
 python3 src/jsearch.py --preset frontend --live
 python3 src/jsearch.py --preset backend --live
-python3 src/jsearch.py --preset fullstack --pages 2 --live
+python3 src/jsearch.py --preset fullstack --live
 python3 src/jsearch.py --preset ml --live
-python3 src/jsearch.py --preset devops --pages 2 --live
+python3 src/jsearch.py --preset devops --live
 python3 src/jsearch.py --query "python intern" --live
 python3 src/jsearch.py --query "java intern" --live
-python3 src/jsearch.py --preset qa --live
-
 
 # load all fetched jobs into the database
 echo ""
-echo "============================================================"
 echo "loading jobs into database"
-echo "============================================================"
 
 # capture output and extract the "Loaded" count
 LOAD_OUTPUT=$(python3 scripts/load_jsearch.py --all --mock 2>&1)

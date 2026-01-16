@@ -1,4 +1,3 @@
-# natural language to SQL conversion
 # uses GPT-4o to generate SQL from plain english/french questions
 import config
 import json
@@ -148,7 +147,6 @@ WHERE c.name ILIKE '%ubisoft%'
 ORDER BY s.name;
 """
 
-
 def generate_sql(question: str) -> str:
     """
     convert natural language question to SQL query.
@@ -188,7 +186,6 @@ RULES:
     sql = clean_sql(sql)
     
     return sql
-
 
 def clean_sql(sql: str) -> str:
     """remove markdown formatting and extra whitespace."""
@@ -316,7 +313,6 @@ def ask_interactive(question: str) -> None:
         
         if len(results) > 20:
             print(f"... and {len(results) - 20} more rows")
-
 
 # testing
 if __name__ == "__main__":
